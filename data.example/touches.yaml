@@ -1,0 +1,33 @@
+version: 1
+
+touches:
+  - id: t-0001
+    person: jane-okafor
+    direction: outbound
+    kind: note
+    asof: 2026-01-18
+    summary: "Intro note referencing the platform req."
+    opportunity: northwind-principal-platform
+    expects_reply_by: 2026-01-25
+
+  - id: t-0002
+    person: jane-okafor
+    direction: inbound
+    kind: reply
+    asof: 2026-01-19
+    summary: "Replied same week, scheduled the screen."
+
+  - id: t-0003
+    person: sam-delgado
+    direction: outbound
+    kind: note
+    asof: 2026-01-05
+    summary: "Asked whether the data infra req is still open."
+    expects_reply_by: 2026-01-12
+
+  - id: t-0004
+    person: priya-raman
+    direction: outbound
+    kind: deliberate_wait
+    asof: 2026-02-02
+    summary: "Holding off until the panel debrief lands."

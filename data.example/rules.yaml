@@ -1,0 +1,36 @@
+version: 1
+
+rules:
+  - id: no-fabricated-attribution
+    severity: error
+    kind: requires_citation
+    applies_to: [prep_doc, outreach, resume, cover_letter]
+    description: "A quote or attributed claim must resolve to a source in the corpus."
+
+  - id: employer-location-canonical
+    severity: error
+    kind: canonical_fact
+    applies_to: [resume]
+    fact: employer.northwind.location
+    expect: "Remote"
+    forbidden: ["Portland", "Portland, OR"]
+
+  - id: no-em-dash
+    severity: error
+    kind: forbidden_pattern
+    applies_to: [resume, cover_letter, outreach]
+    patterns: ["—", "--"]
+
+  - id: tools-allowlist
+    severity: error
+    kind: canonical_fact
+    applies_to: [resume]
+    fact: operator.tools.ai_prototyping
+    expect: ["ToolA", "ToolB"]
+    forbidden: ["ToolC"]
+
+  - id: exclude-pinhole
+    severity: error
+    kind: exclusion
+    applies_to: [sourcing]
+    forbidden_companies: ["Pinhole Labs"]

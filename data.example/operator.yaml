@@ -1,0 +1,18 @@
+name: "Alex Rivera"
+location: "Portland, Oregon"
+timezone: "America/Los_Angeles"
+employment_status: "employed"
+
+target:
+  titles: ["Principal Product Manager", "Staff Product Manager"]
+  focus: "developer platform, data infrastructure"
+  arrangement: ["remote"]
+  contract_acceptable: false
+  base_target: { low: 240000, high: 280000 }
+
+tools:
+  ai_prototyping: ["ToolA", "ToolB"]
+  never_used: ["ToolC"]
+
+honest_positions:
+  coding: "Comfortable reading code. Not a working engineer."

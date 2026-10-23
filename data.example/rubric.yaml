@@ -1,0 +1,26 @@
+version: 1
+effective: 2026-01-01
+
+gates:
+  - { id: req_level, rule: "level in [staff, principal]" }
+  - { id: comp_top, rule: "comp.base_high >= 230000" }
+  - { id: remote_ok, rule: "arrangement.remote == true", tri_state: true }
+
+dimensions:
+  - { id: builder_facing_platform, weight: 40, label: "Builder-facing platform rather than a feature surface" }
+  - { id: owns_quality_layer, weight: 35, label: "Owns the quality and reliability layer" }
+  - { id: midsize_post_pmf, weight: 25, label: "Mid-size and post product-market fit" }
+
+scoring:
+  scale: [0, 1, 2, 3]
+  formula: "sum(weight * score / 3)"
+
+bands:
+  pursue_hard: 80
+  apply_and_tailor: 65
+  warm_intro_only: 50
+  pass_below: 50
+
+auto_flags:
+  - "adoption-only charge"
+  - "no dedicated engineering support"

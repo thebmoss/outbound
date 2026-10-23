@@ -1,0 +1,40 @@
+version: 1
+
+opportunities:
+  - id: northwind-principal-platform
+    company: northwind
+    title: "Principal Product Manager, Platform"
+    level: principal
+    arrangement: { remote: true }
+    posting:
+      canonical_url: "https://jobs.ashbyhq.com/northwind/abc-123"
+      ats: ashby
+      req_id: "abc-123"
+      first_seen: 2026-01-14
+      content_hash: "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+    comp: { source: stated, base_low: 240000, base_high: 300000 }
+    origin: referral
+    state: interviewing
+    people: [jane-okafor, priya-raman]
+    process:
+      - { round: screen, asof: 2026-01-20, who: jane-okafor, outcome: advanced }
+      - { round: hiring_manager, asof: 2026-01-27, who: priya-raman, outcome: pending }
+
+  - id: acme-staff-data-infra
+    company: acme-systems
+    title: "Staff Product Manager, Data Infrastructure"
+    level: staff
+    arrangement: { remote: true }
+    comp: { source: stated, base_low: 210000, base_high: 245000 }
+    origin: identified
+    state: scored
+    people: [sam-delgado]
+
+  - id: pinhole-senior-pm
+    company: pinhole
+    title: "Senior Product Manager"
+    level: senior
+    arrangement: { remote: false }
+    comp: { source: stated, base_low: 150000, base_high: 190000 }
+    origin: inbound_recruiter
+    state: identified

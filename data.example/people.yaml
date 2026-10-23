@@ -1,0 +1,34 @@
+version: 1
+
+people:
+  - id: jane-okafor
+    name: "Jane Okafor"
+    priority: warm_list
+    org: { company: northwind, title: "Talent Partner" }
+    relationship: recruiter
+    warmth: warm
+    door: open
+    door_note: "Asked to stay in touch; said roles shift often as they grow."
+    hook: "Follow up when a platform req opens."
+    channels: [email, linkedin]
+    companies_seen: [northwind, acme-systems]
+    status: not_yet_contacted
+
+  - id: sam-delgado
+    name: "Sam Delgado"
+    priority: warm_list
+    org: { company: acme-systems, title: "Staff Product Manager" }
+    relationship: former_colleague
+    also: [referrer, advocate]
+    warmth: advocate
+    door: open
+    hook: "Offered a referral unprompted. Already inside."
+    status: active_channel
+
+  - id: priya-raman
+    name: "Priya Raman"
+    org: { company: northwind, title: "Director of Product" }
+    relationship: hiring_manager
+    warmth: contacted
+    door: unknown
+    status: closed_process

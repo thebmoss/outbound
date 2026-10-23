@@ -1,0 +1,26 @@
+version: 1
+
+closures:
+  - opportunity: pinhole-senior-pm
+    asof: 2026-01-30
+    outcome: withdrawn
+    stage_reached: screen
+    reasons:
+      - claim: "Band below the gate and the role is onsite."
+        status: stated
+        source: { kind: self }
+        asof: 2026-01-30
+
+  - opportunity: acme-staff-data-infra
+    asof: 2026-02-10
+    outcome: no_response
+    stage_reached: applied
+    company_feedback: none
+    reasons: []
+    reasons_note: "No stated cause. Nothing below may be reported as one."
+    observations:
+      - claim: "Applied cold rather than routing through the referrer who offered."
+        status: observed
+        source: { kind: self }
+        asof: 2026-02-10
+    doors_left_open: [sam-delgado]

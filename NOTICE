@@ -1,0 +1,24 @@
+outbound
+Copyright (c) 2026 Brian Moss
+
+This project's data model was informed by reading these MIT-licensed projects.
+No code was copied from any of them; the debts are conceptual and are recorded
+here so they are not mistaken for original invention:
+
+- brianraines/job-hunt (MIT) — https://github.com/brianraines/job-hunt
+  Borrowed ideas: directive files as the operator's stated intent; a committed
+  "seen" set so a posting is only resurfaced when it materially changes;
+  one dated evaluation report per company rather than a mutable record; the
+  refuse-to-write-unless-git-ignores-it safeguard on private data; recording
+  the applicant tracking system host per company instead of an aggregator URL.
+
+- Remotivated/job-hunt-skills (MIT) — https://github.com/Remotivated/job-hunt-skills
+  Borrowed ideas: a canonical-facts file that generated materials are checked
+  against; separating a source-of-truth career record from per-role tailored
+  derivatives; markdown-first authoring with rendering as a separate step.
+
+- Gensoo/JobHuntAgent (MIT) — https://github.com/Gensoo/JobHuntAgent
+  Borrowed ideas: fit scoring as a first-class artifact of the pipeline.
+
+The AI-Driven Development Life Cycle (AI-DLC) methodology and its workflow
+tooling are by Amazon Web Services — https://github.com/awslabs/aidlc-workflows

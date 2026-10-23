@@ -1,0 +1,18 @@
+version: 1
+
+companies:
+  - id: northwind
+    name: "Northwind Systems"
+    board: { ats: ashby, url: "https://jobs.ashbyhq.com/northwind" }
+    size_band: "150-500"
+    status: active
+  - id: acme-systems
+    name: "Acme Systems"
+    board: { ats: greenhouse, url: "https://boards.greenhouse.io/acmesystems" }
+    size_band: "500-2500"
+    status: active
+  - id: pinhole
+    name: "Pinhole Labs"
+    size_band: "50-150"
+    status: excluded
+    excluded_reason: "Seed-stage band below the gate."

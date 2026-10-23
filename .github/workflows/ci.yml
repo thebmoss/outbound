@@ -1,0 +1,33 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm test
+
+  no-private-data:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fail if real data was ever committed
+        run: |
+          if git ls-files --error-unmatch data/ 2>/dev/null | grep -qv '^data/.gitignore$'; then
+            echo "::error::Files under data/ are tracked. That directory holds private job-search data and must stay ignored."
+            git ls-files data/
+            exit 1
+          fi
+          echo "data/ is clean."
